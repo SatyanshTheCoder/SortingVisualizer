@@ -34,11 +34,10 @@ export async function selectionSort(
           return;
         }
 
-       
         compRef += 1;
         setComp(compRef);
         setSwapping([j]);
-        await sleep(highlightRef.current);  
+        await sleep(highlightRef.current);
 
         if (resetRef.current) {
           resetRef.current = false;
@@ -54,9 +53,9 @@ export async function selectionSort(
       }
 
       if (minIndex !== i) {
-        setSwapping([i, minIndex]);  
+        setSwapping([i, minIndex]);
         handleSwap(i, minIndex, divRef, setIsSwapping, setSwapStyles);
-        await sleep(delayRef.current);  
+        await sleep(delayRef.current);
         if (resetRef.current) {
           resetRef.current = false;
           return;
@@ -67,7 +66,6 @@ export async function selectionSort(
         setSwaps(swapRef);
         setArray([...arr]);
 
-       
         setSwapping([]);
         setIsSwapping(false);
         setSwapStyles({});
@@ -78,13 +76,10 @@ export async function selectionSort(
         }
       }
 
-    
       sortedArr.push(i);
       setSorted([...sortedArr]);
-      
     }
 
-   
     sortedArr.push(n - 1);
     setMinIdx([]);
     setSorted([...sortedArr]);

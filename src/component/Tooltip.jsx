@@ -1,8 +1,7 @@
-
 import React, { useState, useRef } from "react";
 import { createPortal } from "react-dom";
 
-const Tooltip = ({ children, text ,classes }) => {
+const Tooltip = ({ children, text, classes }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const ref = useRef(null);

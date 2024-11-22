@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
 const Check = () => {
   const [numDivs, setNumDivs] = useState(5); // Default number of divs
@@ -21,27 +20,25 @@ const Check = () => {
 
   // Swap function with animation
   const handleSwap = () => {
-    
-      const element1 = divRefs.current[swapIndex1];
-      const element2 = divRefs.current[swapIndex2];
+    const element1 = divRefs.current[swapIndex1];
+    const element2 = divRefs.current[swapIndex2];
 
-      if (element1 && element2) {
-        // Calculate the distance between the two elements
-        const rect1 = element1.getBoundingClientRect();
-        const rect2 = element2.getBoundingClientRect();
+    if (element1 && element2) {
+      // Calculate the distance between the two elements
+      const rect1 = element1.getBoundingClientRect();
+      const rect2 = element2.getBoundingClientRect();
 
-        const deltaX = rect2.left - rect1.left;
-      
+      const deltaX = rect2.left - rect1.left;
 
-        // Create keyframes for each element
-        const swapAnimation1 = `
+      // Create keyframes for each element
+      const swapAnimation1 = `
           @keyframes swap1 {
             25% { transform: translateY(${55}px); }
             75% { transform: translate(${deltaX}px, ${55}px); }
             100% { transform: translate(${deltaX}px, 0); }
           }
         `;
-        const swapAnimation2 = `
+      const swapAnimation2 = `
           @keyframes swap2 {
             25% { transform: translateY(${-55}px); }
             75% { transform: translate(${-deltaX}px, ${-55}px); }
@@ -49,19 +46,21 @@ const Check = () => {
           }
         `;
 
-        setSwapStyles({ swapAnimation1, swapAnimation2 });
-        setIsSwapping(true); // Trigger animations
+      setSwapStyles({ swapAnimation1, swapAnimation2 });
+      setIsSwapping(true);
 
-        setTimeout(() => {
-          const newDivs = [...divs];
-         [newDivs[swapIndex1], newDivs[swapIndex2]] = [newDivs[swapIndex2], newDivs[swapIndex1]];
-          setDivs(newDivs);
-          // Perform the actual swap after the animation
-          setIsSwapping(false); // Reset animation state
-          setSwapStyles({}); // Clear styles after swap
-        }, 500); // Duration of the animation
-      }
-    
+      setTimeout(() => {
+        const newDivs = [...divs];
+        [newDivs[swapIndex1], newDivs[swapIndex2]] = [
+          newDivs[swapIndex2],
+          newDivs[swapIndex1],
+        ];
+        setDivs(newDivs);
+
+        setIsSwapping(false);
+        setSwapStyles({});
+      }, 500);
+    }
   };
 
   return (
@@ -124,8 +123,6 @@ const Check = () => {
       </div>
     </div>
   );
-
-  
 };
 
 export default Check;

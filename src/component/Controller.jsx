@@ -35,9 +35,8 @@ export const Controller = ({
   isOn,
   highlightRef,
   delayRef,
-  dark
+  dark,
 }) => {
-  
   const [speed, setSpeed] = useState(1);
   const location = useLocation();
   const idTime = useRef(null);
@@ -259,37 +258,48 @@ export const Controller = ({
         </div>
         {/* PlayButton */}
         <div className="flex md:w-fit w-full gap-5 md:justify-normal md:gap-7 shrink-0">
-        <Tooltip text="Play" classes="">
-          <button
-            onClick={() => {
-              resetRef.current = false;
-              setPlay(true);
-              console.log(play);
-            }}
-            className="py-1.5 active:scale-95 "
-          >
-            <img className={`h-6 w-6 ${dark?'invert':""}`} src="src\assets\download.svg" alt="play" />
+          <Tooltip text="Play" classes="">
+            <button
+              onClick={() => {
+                resetRef.current = false;
+                setPlay(true);
+                console.log(play);
+              }}
+              className="py-1.5 active:scale-95 "
+            >
+              <img
+                className={`h-6 w-6 ${dark ? "invert" : ""}`}
+                src="src\assets\download.svg"
+                alt="play"
+              />
             </button>
-            </Tooltip>  
+          </Tooltip>
           {/* Reset Button */}
           <Tooltip text="Reset" classes="">
-          <button onClick={resetArray} className={`py-1.5   active:rotate-45 `}>
-            <img className={`h-6 w-6 ${dark?'invert':""}`} src="src\assets\reset.svg" alt="Reset" />
+            <button
+              onClick={resetArray}
+              className={`py-1.5   active:rotate-45 `}
+            >
+              <img
+                className={`h-6 w-6 ${dark ? "invert" : ""}`}
+                src="src\assets\reset.svg"
+                alt="Reset"
+              />
             </button>
-            </Tooltip>  
+          </Tooltip>
           {/* Delay button */}
-         
-         <Tooltip text="Animation Speed" classes="flex flex-grow">
-          <input
-            onChange={updateDelay}
-            className="md:w-52 w-full shrink"
-            type="range"
-            min="1"
-            max="20"
-            step="1"
-            value={speed}
+
+          <Tooltip text="Animation Speed" classes="flex flex-grow">
+            <input
+              onChange={updateDelay}
+              className="md:w-52 w-full shrink"
+              type="range"
+              min="1"
+              max="20"
+              step="1"
+              value={speed}
             ></input>
-          </Tooltip>  
+          </Tooltip>
         </div>
       </div>
     </div>

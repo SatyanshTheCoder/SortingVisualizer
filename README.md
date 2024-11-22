@@ -1,8 +1,47 @@
-# React + Vite
+# Sorting Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application to visualize various sorting algorithms in an interactive and educational way.
 
-Currently, two official plugins are available:
+## **Features**
+- Visualize sorting algorithms like Bubble Sort, Quick Sort, Merge Sort, and more.
+- Adjustable array size and sorting speed.
+- User-friendly interface with animations for better understanding.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## **Live Demo**
+Check out the live version of the app here:  
+[Sorting Visualizer Live](https://sorting-visualizer-nu-seven.vercel.app/bubble)
+
+---
+
+## **Getting Started**
+
+Follow these steps to clone and run the project locally:
+
+### **Prerequisites**
+- **Node.js** installed on your machine. You can download it from [Node.js Official Website](https://nodejs.org).
+
+### **Installation**
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/SatyanshTheCoder/SortingVisualizer.git
+   
+2. **Navigate to the project directory:**
+   ```bash
+   cd SortingVisualizer
+   
+3. **Install dependencies:**
+   ```bash
+   npm install
+   
+4. **Start the development server:**
+   ```bash
+   npm start
+   
+## **Technologies Used**
+- React.js for building the UI.
+- Tailwind CSS for styling.
+- Sooner for toast notifications.
+

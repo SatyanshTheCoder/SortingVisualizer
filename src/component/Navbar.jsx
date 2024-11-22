@@ -27,7 +27,7 @@ export const Navbar = ({ dark }) => {
           {" "}
           <img
                 className={`h-6 w-6 ${dark ? "invert" : ""}`}
-                src="public\assets\home.svg"
+                src="\assets\home.svg"
                 alt="play"
               />
           Sorting Visualizer

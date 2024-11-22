@@ -5,13 +5,13 @@ export const Home = () => {
   return (
     <div
       className="h-screen "
-      style={{ backgroundImage: `url(${"src/assets/whiteback.jpg"})` }}
+      style={{ backgroundImage: `url(${"/assets/whiteback.jpg"})` }}
     >
       <div className=" pt-28 ml-6 border-l-8 border-black pl-1 ">
         <h1 className="font-bold text-6xl md:text-6xl lg:text-9xl mb-3 motion-preset-slide-down-sm motion-duration-2000 font-sans">Sorting </h1>
         <h1 className=" font-bold  text-6xl md:text-6xl lg:text-9xl motion-preset-slide-down-sm motion-duration-2000 font-sans ">Visualizer </h1>
       </div>
-      <div className="  mt-28 bg-black motion-preset-fade-lg" style={{ backgroundImage: `url(${"src/assets/blackback.jpg"})` }}>
+      <div className="  mt-28 bg-black motion-preset-fade-lg" style={{ backgroundImage: `url(${"/assets/blackback.jpg"})` }}>
         <div className="flex justify-center flex-col mt-10 pt-10 pb-5 px-4 text-white ">
           <h1 className="text-white font-bold text-2xl mb-5 ">
             Sorting Algorithms

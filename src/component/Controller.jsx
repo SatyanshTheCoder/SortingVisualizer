@@ -269,7 +269,7 @@ export const Controller = ({
             >
               <img
                 className={`h-6 w-6 ${dark ? "invert" : ""}`}
-                src="src\assets\download.svg"
+                src="public\assets\download.svg"
                 alt="play"
               />
             </button>
@@ -282,7 +282,7 @@ export const Controller = ({
             >
               <img
                 className={`h-6 w-6 ${dark ? "invert" : ""}`}
-                src="src\assets\reset.svg"
+                src="public\assets\reset.svg"
                 alt="Reset"
               />
             </button>

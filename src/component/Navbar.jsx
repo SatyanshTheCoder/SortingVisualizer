@@ -46,13 +46,13 @@ export const Navbar = ({ dark }) => {
         </button>
       </div>
       <ul
-        className={`md:flex md:justify-evenly md:gap-4 ${
-          isToggel
-            ? `absolute z-10 flex flex-col top-16 ${
-                dark ? "bg-black" : "bg-white"
-              }  right-0 gap-2 shadow w-full px-1`
-            : "hidden "
-        }`}
+       className={`md:flex md:justify-evenly md:gap-4 ${
+        isToggel
+          ? `absolute z-10 flex flex-col top-16 ${
+              dark ? "bg-black" : "bg-white"
+            } right-0 gap-2 shadow w-full px-1`
+          : "sm:hidden"
+      } `}
       >
         <li>
           <Link to="/bubble">
